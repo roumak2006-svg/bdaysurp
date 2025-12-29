@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthdayy Awwdrijaa ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" autoplay loop>
+  <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn">🔊</button>
+
+<!-- Falling Hearts -->
+<div id="hearts"></div>
+
+<!-- PAGE 1 -->
+<section class="page active">
+  <h1 class="glow">Happy Birthday <span id="name"></span> 🎉</h1>
+  <p class="typewriter" id="typeText"></p>
+  <button onclick="nextPage()">Next 💖</button>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <h2>My Love Note 💌</h2>
+  <p class="note">
+    You are my happiness, my calm, my forever.
+    Every smile of yours makes my heart fall again.
+  </p>
+  <button onclick="nextPage()">Next 🌸</button>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <h2>Our Memories 📸</h2>
+
+  <div class="photobook">
+    <img id="photoBookImage" src="photos/1.jpg">
+  </div>
+
+  <button onclick="nextPhoto()">Next Photo 💞</button>
+
+  <br><br>
+
+  <button onclick="nextPage()">Go to Videos 🎥</button>
+</section>
+
+
+
+<!-- PAGE 4 -->
+<section class="page">
+  <h2>Reasons I Lovee Youu 🥹❤️</h2>
+  <div class="cards">
+    <div class="card">YOUr smile 😊</div>
+    <div class="card">YOUr kindness 🤍</div>
+    <div class="card">YOUr soul ✨</div>
+    <div class="card">YOU. Always. 🌍</div>
+  </div>
+  <button onclick="nextPage()">Next 🎥</button>
+</section>
+
+<!-- PAGE 5 : VIDEO MEMORY WALL -->
+<section class="page">
+  <h2>Our Video Memories 🎥</h2>
+  <div class="video-wall">
+    <video src="videos/1.mp4" controls></video>
+    <video src="videos/2.mp4" controls></video>
+    <video src="videos/3.mp4" controls></video>
+  </div>
+  <button onclick="nextPage()">Next 🎂</button>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page">
+  <h2>Make a Wish 🎂</h2>
+  <p>Blow the candle 👇</p>
+  <div id="candle" onclick="blowCandle()">🕯️</div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page">
+  <h1>Forever Yours ❤️</h1>
+  <p>Tap below for a secret 💝</p>
+  <button onclick="unlock()">Unlock 🔐</button>
+</section>
+
+<!-- PAGE 8 : SECRET -->
+<section class="page secret">
+  <h1>I Lovee Youuu To the Moon and Never Back Shonaa 💖🧿</h1>
+  <p>
+    No matter where life takes us,  
+    my heart will always choose you.
+  </p>
+  <p>
+    Have a wonderful year ahead my bbyy (ofc with me huh🙂🫂)
+  </p>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

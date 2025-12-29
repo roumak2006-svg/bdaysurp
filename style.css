@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg,#ff9a9e,#fad0c4);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+  height: 100vh;
+  padding: 50px;
+}
+
+.page.active {
+  display: block;
+}
+
+.glow {
+  font-family: 'Pacifico', cursive;
+  text-shadow: 0 0 25px pink;
+}
+
+button {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  color: #ff5e78;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 25px;
+  position: relative;
+  z-index: 10; /* ALWAYS ABOVE PHOTOBOOK */
+}
+
+
+.note {
+  max-width: 650px;
+  margin: auto;
+}
+
+#slideshow {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.25);
+  padding: 20px;
+  border-radius: 15px;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  50% { transform: translateY(-10px); }
+}
+
+.video-wall {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+video {
+  width: 240px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+#candle {
+  font-size: 80px;
+  cursor: pointer;
+}
+
+#musicBtn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Hearts */
+.heart {
+  position: fixed;
+  font-size: 20px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  from { top: -10%; }
+  to { top: 110%; }
+}
+
+/* ===== PHOTOBOOK ANIMATION ===== */
+
+.photobook {
+  width: 280px;
+  height: 380px;
+  margin: 30px auto;
+  perspective: 1200px;
+}
+
+.photobook img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  transform-origin: left center;
+  animation: pageIn 0.8s ease;
+}
+.photobook {
+  position: relative;
+  z-index: 1;
+}
+
+.photobook img {
+  pointer-events: none; /* image should not capture clicks */
+}
+
+
+/* Flip out animation */
+.flip-out {
+  animation: pageOut 0.6s ease forwards;
+}
+
+/* Flip in animation */
+@keyframes pageIn {
+  from {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes pageOut {
+  from {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+}
+
